@@ -1,0 +1,45 @@
+{
+  "name": "kitchencabbie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "fsevents": "^2.3.2",
+    "playwright": "^1.53.1",
+    "playwright-core": "^1.53.1",
+    "undici-types": "^7.8.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "monocart-reporter": "^2.9.12",
+    "otpauth": "^9.4.0",
+    "typescript": "^5.7.2",
+    "winston": "^3.17.0"
+  },
+  "scripts": {
+    "pretest": "tsc --noEmit",
+    "update:playwright": "playwright install --with-deps",
+    "test:record": "npx playwright codegen --viewport-size=1920,1080 https://admin.kitchencab.in/login",
+    "test:chrome": "npx playwright test --project=Chrome",
+    "html-report": "npx playwright test --reporter=html && npx playwright show-report",
+    "test": "npx cross-env ENV=dev npx playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gobinath90/kitchenCabbie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gobinath90/kitchenCabbie/issues"
+  },
+  "homepage": "https://github.com/Gobinath90/kitchenCabbie#readme"
+}
