@@ -1,0 +1,16 @@
+{
+    "validCategory": {
+      "namePrefix": "chicken",
+      "imagePath": ["public", "logos", "amp-chicken-new", "WhatsApp Image 2025-05-22 at 23.14.56.jpeg"]
+    },
+    "duplicateCategory": {
+      "name": "chicken",
+      "slug": "chicken",
+      "imagePath": ["public", "logos", "amp-chicken-new", "WhatsApp Image 2025-05-22 at 23.14.56.jpeg"]
+    },
+    "productCategory": {
+      "namePrefix": "product",
+      "imagePath": ["public", "logos", "amp-chicken-new", "WhatsApp Image 2025-05-22 at 23.14.56.jpeg"]
+    }
+  }
+  
