@@ -39,7 +39,7 @@ test.describe('Admin Panel UI Tests', () => {
         await expect(page.getByRole('heading', { name: 'Create Category' })).not.toBeVisible();
     });
 
-    test('@smokes Create Category with readable dynamic name', async ({ page }) => {
+    test('@smoke Create Category with readable dynamic name', async ({ page }) => {
         const { namePrefix, imagePath } = categoryData.validCategory;
         const categoryName = generateReadableName(namePrefix);
         const categorySlug = categoryName;
@@ -50,14 +50,14 @@ test.describe('Admin Panel UI Tests', () => {
         await page.waitForTimeout(5000);
     });
 
-    test('Create Category - Duplicate Name or Slug', async ({ page }) => {
+    test('@smoke Create Category - Duplicate Name or Slug', async ({ page }) => {
         const { name, slug, imagePath } = categoryData.duplicateCategory;
         await createCategory(page, name, slug, imagePath);
         await page.getByRole('button', { name: 'Create', exact: true }).click();
         await expect(page.getByText('This category already exists')).toBeVisible();
     });
 
-    test('Create, Edit and Delete Product with dynamic name', async ({ page }) => {
+    test('@smoke Create, Edit and Delete Product with dynamic name', async ({ page }) => {
         const { namePrefix, imagePath } = categoryData.productCategory;
         const originalName = generateReadableName(namePrefix);
         const originalSlug = originalName;

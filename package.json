@@ -20,10 +20,10 @@
   "scripts": {
     "pretest": "tsc --noEmit",
     "update:playwright": "playwright install --with-deps",
-    "test:record": "npx playwright codegen --viewport-size=1920,1080 https://admin.kitchencab.in/login",
+    "test:record": "npx playwright codegen --viewport-size=1920,1080 https://dev.kitchencab.in/",
     "test:chrome": "npx playwright test --project=Chrome",
     "html-report": "npx playwright test --reporter=html && npx playwright show-report",
-    "test": "npx playwright test -g \"@smokes\" --headed"
+    "test": "npx playwright test -g \"@smoke\" --headed"
 
   },
   "keywords": [],
